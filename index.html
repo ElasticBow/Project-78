@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Project 78</title>
+    </head>
+    <body style="text-align: center;">
+        <h1>My Family Book</h1>
+        <img src="kid.jpeg" style="width: 30%;" id="family_member_image">
+        <h2 id="family_member_name">Kenneth Gonzalez</h2>
+        <button onclick="update()">Next</button>
+        <script>
+            var images = ["kid.jpeg","mom.jpeg","dad.jpeg","grandma.jpeg"];
+            var names = ["Kenneth Gonzalez","Leticia Matute (Mom)","Rafael Gonzalez (Dad)","Electicia Melgar (Grandma)"];
+
+            var i = 0;
+            function update() {
+                i++;
+                var numbers_of_family_member_in_array = 5;
+                if(i > numbers_of_family_member_in_array)
+                {
+                    i = 0;
+                }
+                var updatedImage = images[i];
+                var updatedName = names[i];
+                document.getElementById("family_member_image").src = updatedImage;
+                document.getElementById("family_member_name").innerHTML = updatedName;
+            }
+        </script>
+    </body>
+</html>
